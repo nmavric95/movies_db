@@ -17,19 +17,19 @@
     <section class="formulario">
         <form action="/movies/create" method="POST">
             <label for="title">Title </label>
-            <p><input type="text" name="title" id="" value="<%= locals.oldData ? oldData.title : null %>" ></p>
+            <p><input type="text" name="title" id="" value="<%= locals.oldData && locals.oldData.title ? oldData.title : null %>" required></p>
             <p><%= locals.errors && locals.errors.title ? errors.title.msg : null %> </p>
             <label for="rating">Rating </label>
-            <p><input type="number" name="rating" id="" value="<%= locals.oldData ? oldData.rating : null %>"> </p>
+            <p><input type="number" name="rating" id="" value="<%= locals.oldData && locals.oldData.rating ? oldData.rating : null %>" required> </p>
             <p><%= locals.errors && locals.errors.rating ? errors.rating.msg : null %> </p>
             <label for="awards">Awards </label>
-            <p><input type="number" name="awards" id="" value="<%= locals.oldData ? oldData.awards : null %>" ></p>
+            <p><input type="number" name="awards" id="" value="<%= locals.oldData && locals.oldData.awards ? oldData.awards : null %>" required></p>
             <p><%= locals.errors && locals.errors.awards ? errors.awards.msg : null %> </p>
             <label for="release_date">Release date </label>
-            <p><input type="date" name="release_date" id="" value="<%= locals.oldData ? oldData.release_date : null %>" ></p>
+            <p><input type="date" name="release_date" id="" value="<%= locals.oldData && locals.oldData.release_date ? oldData.release_date : null %>" required></p>
             <p><%= locals.errors && locals.errors.release_date ? errors.release_date.msg : null %> </p>
             <label for="length">Length </label>
-            <p><input type="number" name="length" id="" value="<%= locals.oldData ? oldData.length : null %>" ></p>
+            <p><input type="number" name="length" id="" value="<%= locals.oldData && locals.oldData.length ? oldData.length : null %>" required></p>
             <p><%= locals.errors && locals.errors.length ? errors.length.msg : null %> </p>
 
             <br>

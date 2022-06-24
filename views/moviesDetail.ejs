@@ -18,7 +18,7 @@
     <p>LENGTH: <%= movie.length + ' min'%> </p>
     <p>RELEASE DATE: <%= movie.release_date %> </p>
     <p><a  class="botonVolver" href="/movies/edit/<%= movie.id %>">Editar</a></p>
-    <form action="/movies/delete/<%= movie.id %>?_method=DELETE" method="post"><button class="botonVolver" type="submit">Eliminar</button></form>
+    <p><a  class="botonVolver" href="/movies/delete/<%= movie.id %>">Eliminar</a></p>
     
 
 </body>

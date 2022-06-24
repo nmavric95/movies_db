@@ -5,9 +5,9 @@ module.exports = (sequelize, DataTypes) =>{
     let cols = {
         id:{
             type: DataTypes.INTEGER(10),
-            allowNull: false,
             primaryKey: true,
-            autoincrement: true
+            autoincrement: true,
+            
         },
         title:{
             type: DataTypes.STRING(500),

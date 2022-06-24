@@ -97,6 +97,12 @@ module.exports={
     delete: (req, res)=>{
         let pk = req.params.id
 
+        db.Movie.findByPk(pk)
+        .then(movie => res.render("moviesDelete", {Movie: movie}))
+    },
+    destroy: (req, res)=>{
+        let pk = req.params.id
+
         db.Movie.destroy({
             where: {id: pk}
         })
